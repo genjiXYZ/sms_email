@@ -1,5 +1,7 @@
 # sms_email
 
+[http://sms.genji.xyz](http://sms.genji.xyz)
+
 1. 熟悉下vue3
 2. 试试 element-plus
 3. 试试 阿里短信 

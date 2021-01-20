@@ -8,7 +8,7 @@ export default createStore({
       createAt: window.localStorage.createAt || "",
       email: "发送邮箱验证码",
     },
-  },
+  },s
   mutations: {
     setUser(state, payload) {
       console.log("payload: ", payload);

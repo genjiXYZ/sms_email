@@ -58,7 +58,7 @@ export default defineComponent({
     let isloading = ref(false);
     let isdisabled = ref(false);
     let isAgree = ref(false);
- 
+
     async function clickSend(e) {
       e.preventDefault();
 
@@ -80,7 +80,6 @@ export default defineComponent({
 
       let s = 60;
       sign = setInterval(() => {
-  
         count.value = s -= 1;
         if ((count.value -= 1) < 0) {
           clearTimeout(sign);
@@ -103,10 +102,9 @@ export default defineComponent({
           if (Object.hasOwnProperty.call(res.data.user, key)) {
             const element = res.data.user[key];
             window.localStorage[key] = element;
-            store.state.user[key] = element
+            store.state.user[key] = element;
           }
         }
-      
       } else {
         ElNotification.info("是不是有什么事没干?");
       }

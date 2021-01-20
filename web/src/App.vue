@@ -6,9 +6,7 @@
     <router-view v-slot="{ Component }">
       <transition name="Bottom" mode="out-in" appear>
         <keep-alive>
-
           <component :is="Component" />
-
         </keep-alive>
       </transition>
     </router-view>
@@ -26,7 +24,9 @@ export default {
     Video,
   },
   setup() {
-    console.log("这个vue提示,我真是吐了,找了好久文档vue3 config.productionTip api也被移除了 ,mode 明明是 production 后来看了vue3官方例子也有,我就放弃fix它了")
+    console.log(
+      "这个vue提示,我真是吐了,找了好久文档vue3 config.productionTip api也被移除了 ,mode 明明是 production 后来看了vue3官方例子也有,我就放弃fix它了"
+    );
     const router = useRouter();
     router.beforeEach((to) => {
       if (to.name === "completeProfile" && !window.localStorage.token) {

@@ -1,24 +1,10 @@
 <template>
   <div class="video">
-    <video
-      class="intro-loop"
-      ref="introLoop"
-      @canplay="isAllLoaded"
-      muted
-      playsinline
-      loop
-    >
+    <video class="intro-loop" ref="introLoop" @canplay="isAllLoaded" muted playsinline loop>
       <source src="https://picgo.genji.xyz/sms/loop.webm" type="video/webm" />
       <source src="https://picgo.genji.xyz/sms/loop.mp4" type="video/mp4" />
     </video>
-    <video
-      class="intro"
-      ref="intro"
-      @canplay="isAllLoaded"
-      @ended="OpacityAndPlayNext"
-      muted
-      playsinline
-    >
+    <video class="intro" ref="intro" @canplay="isAllLoaded" @ended="OpacityAndPlayNext" muted playsinline>
       <source src="https://picgo.genji.xyz/sms/intro.webm" type="video/webm" />
       <source src="https://picgo.genji.xyz/sms/intro.mp4" type="video/mp4" />
     </video>
@@ -40,17 +26,14 @@ export default {
 
     const isAllLoaded = () => {
       if (loadedSign.push(1) === 1) {
-       let play =  intro.value.play();
-        if(play){
-          play.then(()=>{
-         
-          }).catch((e)=>{
-            console.log('e: ', e);
-
-          
-          })
+        let play = intro.value.play();
+        if (play) {
+          play
+            .then(() => {})
+            .catch((e) => {
+              console.log("e: ", e);
+            });
         }
-
       }
     };
 

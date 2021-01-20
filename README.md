@@ -7,6 +7,8 @@
 5. 看到一个很好的 可以当做 loading video, 添加一下.
 
 
+
+环境变量 有accessKeyId 和 accessKeySecret 没有push
 ```js
 // server  .env.prod
 MONGODB_LINK = "mongodb://localhost:****/sms"
